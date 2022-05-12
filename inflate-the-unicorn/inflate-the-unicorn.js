@@ -10,43 +10,43 @@ var uni1 = document.getElementById('uni1')
 var uni2 = document.getElementById('uni2')
 
 //to change the number on the images file
-var baloonInflate0 = 0
-var baloonInflate1 = 0
-var baloonInflate2 = 0
+var baloon0 = 0
+var baloon1 = 0
+var baloon2 = 0
 
 //clicked unicorn call
 uni0.onclick = clickedUni
 uni1.onclick = clickedUni
 uni2.onclick = clickedUni
 
-function clickedUni(event) {
-  var unicorn = event.target
+function clickedUni(e) {
+  var unicorn = e.target
 
   if (unicorn.id == 'uni0') {
-    baloonInflate0++
-    unicorn.src = './images/unicorn-' + baloonInflate0 + '.png'
+    baloon0++
+    unicorn.src = './images/unicorn-' + baloon0 + '.png'
     //to count max 3 images (0-3)
-    if (baloonInflate0 == 3) {
-      baloonInflate0 = 0
-      alert('Unicorn One says Thank You')
+    if (baloon0 == 3) {
+      baloon0 = 0
+      alert('Baby baby, one more time')
     }
   }
 
   if (unicorn.id == 'uni1') {
-    baloonInflate1++
-    unicorn.src = './images/unicorn-' + baloonInflate1 + '.png'
-    if (baloonInflate1 == 3) {
-      baloonInflate1 = 0
-      alert('Unicorn Two says Thank You')
+    baloon1++
+    unicorn.src = './images/unicorn-' + baloon1 + '.png'
+    if (baloon1 == 3) {
+      baloon1 = 0
+      alert('Oops you did it again')
     }
   }
 
   if (unicorn.id == 'uni2') {
-    baloonInflate2++
-    unicorn.src = './images/unicorn-' + baloonInflate2 + '.png'
-    if (baloonInflate2 == 3) {
-      baloonInflate2 = 0
-      alert('Unicorn Three says Thank You')
+    baloon2++
+    unicorn.src = './images/unicorn-' + baloon2 + '.png'
+    if (baloon2 == 3) {
+      baloon2 = 0
+      alert('Cheerio!')
     }
   }
 }
