@@ -4,29 +4,28 @@
 
 console.log('Whack-a-Mole!')
 
-game = gameBoard.getElementsByTagName('td')
+let game = document.getElementsByTagName('td')
+var number = randomNumber()
+var random = game[number]
+//adding audio
+var audio = new Audio('./whack-audio.wav')
+//adding image
+var mole = document.createElement('img')
+mole.src = './mole.PNG'
+mole.id = 'mole' //for CSS styling the img
 
+//random number generator
 function randomNumber() {
   var box = Math.floor(Math.random() * (24 - 0 + 1)) + 0
   return box
 }
 
-var number = randomNumber()
-var randomPlacement = game[number]
-
-var mole = document.createElement('img')
-mole.src = './mole.PNG'
-mole.id = 'mole'
-
-randomPlacement.appendChild(mole)
-
-var audio = new Audio()
-audio.src = './whack-audio.wav'
+random.appendChild(mole)
 
 function whackedMole() {
   number = randomNumber()
-  randomPlacement = game[number]
-  randomPlacement.appendChild(mole)
+  random = game[number]
+  random.appendChild(mole)
   audio.play()
 }
 
