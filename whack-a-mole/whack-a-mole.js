@@ -5,23 +5,27 @@
 console.log('Whack-a-Mole!')
 
 let game = document.getElementsByTagName('td')
-var number = randomNumber()
-var random = game[number]
+//variables for the random numbers
+let min = 0
+let max = 24
+let number = randomNumber()
+let random = game[number]
 //adding audio
-var audio = new Audio('./whack-audio.wav')
+let audio = new Audio('./whack-audio.wav')
 //adding image
-var mole = document.createElement('img')
+let mole = document.createElement('img')
 mole.src = './mole.PNG'
-mole.id = 'mole' //for CSS styling the img
+mole.id = 'mole' //for CSS styling the size of the image
 
 //random number generator
 function randomNumber() {
-  var box = Math.floor(Math.random() * (24 - 0 + 1)) + 0
-  return box
+  return Math.floor(Math.random() * (max - min + 1) + min).toFixed()
 }
 
+//random mole at the start
 random.appendChild(mole)
 
+//random mole after getting whacked
 function whackedMole() {
   number = randomNumber()
   random = game[number]

@@ -4,15 +4,16 @@
 
 console.log('Inflate The Unicorn!')
 
-//declare var for images in HTML
-var uni0 = document.getElementById('uni0')
-var uni1 = document.getElementById('uni1')
-var uni2 = document.getElementById('uni2')
+//declare variable for images in HTML
+let unicorn0 = document.getElementById('unicorn0')
+let unicorn1 = document.getElementById('unicorn1')
+let unicorn2 = document.getElementById('unicorn2')
+let uniImg = './images/unicorn-'
 
-//to change the number on the images file
-var baloon0 = 0
-var baloon1 = 0
-var baloon2 = 0
+//to change the index number
+let baloon0 = 0
+let baloon1 = 0
+let baloon2 = 0
 
 //clicked unicorn call
 let images = document.getElementsByTagName('img')
@@ -23,9 +24,9 @@ for (i = 0; i < images.length; i++) {
 function clickedUnicorn(e) {
   var unicorn = e.target
 
-  if (unicorn.id == 'uni0') {
+  if (unicorn.id == 'unicorn0') {
     baloon0++
-    unicorn.src = './images/unicorn-' + baloon0 + '.png'
+    unicorn.src = uniImg + baloon0 + '.png'
     //to count max 3 images (0-3)
     if (baloon0 == 3) {
       baloon0 = 0
@@ -33,18 +34,18 @@ function clickedUnicorn(e) {
     }
   }
 
-  if (unicorn.id == 'uni1') {
+  if (unicorn.id == 'unicorn1') {
     baloon1++
-    unicorn.src = './images/unicorn-' + baloon1 + '.png'
+    unicorn.src = uniImg + baloon1 + '.png'
     if (baloon1 == 3) {
       baloon1 = 0
       alert('Oops you did it again')
     }
   }
 
-  if (unicorn.id == 'uni2') {
+  if (unicorn.id == 'unicorn2') {
     baloon2++
-    unicorn.src = './images/unicorn-' + baloon2 + '.png'
+    unicorn.src = uniImg + baloon2 + '.png'
     if (baloon2 == 3) {
       baloon2 = 0
       alert('Cheerio!')

@@ -4,94 +4,81 @@
 
 console.log('Dress The Clown!')
 
-const headStr1 = './images/head'
-const bodyStr1 = './images/body'
-const shoeStr1 = './images/shoes'
+let headImg = './images/head'
+let bodyImg = './images/body'
+let shoesImg = './images/shoes'
 let head = document.getElementById(`head`)
 let body = document.getElementById(`body`)
-let shoes = document.getElementById(`shoe`)
+let shoes = document.getElementById(`shoes`)
+
+//to change the index number
 let headIndex = 0
 let bodyIndex = 0
-let shoeIndex = 0
-let clothingIndex = 0
-// 0 = head
-// 1 = body
-// 2 = shoes
+let shoesIndex = 0
+let clothesIndex = 0
 
 function indexUp() {
-  if (clothingIndex < 2) {
-    clothingIndex++
+  if (clothesIndex < 2) {
+    clothesIndex++
   } else {
-    clothingIndex = 0
+    clothesIndex = 0
   }
 }
 
 function indexDown() {
-  if (clothingIndex <= 0) {
-    clothingIndex = 2
-  } else if (clothingIndex <= 2) {
-    clothingIndex--
+  if (clothesIndex <= 0) {
+    clothesIndex = 2
+  } else if (clothesIndex <= 2) {
+    clothesIndex--
   }
 }
 
 function indexRight() {
   if (clothingIndex == 0) {
-    var headImg = head
-    var headSrc = `${headStr1}${headIndex}.png`
-    headImg.src = headSrc
+    head.src = headImg + headIndex + '.png'
     if (headIndex < 5) {
       headIndex++
     } else {
       headIndex = 0
     }
   } else if (clothingIndex == 1) {
-    var bodyImg = body
-    var bodySrc = `${bodyStr1}${bodyIndex}.png`
-    bodyImg.src = bodySrc
+    body.src = bodyImg + bodyIndex + '.png'
     if (bodyIndex < 5) {
       bodyIndex++
     } else {
       bodyIndex = 0
     }
   } else if (clothingIndex == 2) {
-    var shoeImg = shoes
-    var shoeSrc = `${shoeStr1}${shoeIndex}.png`
-    shoeImg.src = shoeSrc
-    if (shoeIndex < 5) {
-      shoeIndex++
+    shoes.src = shoesImg + shoesIndex + '.png'
+    if (shoesIndex < 5) {
+      shoesIndex++
     } else {
-      shoeIndex = 0
+      shoesIndex = 0
     }
   }
 }
 
 function indexLeft() {
   if (clothingIndex == 0) {
-    var headImg = head
-    var headSrc = `${headStr1}${headIndex}.png`
-    headImg.src = headSrc
+    head.src = headImg + headIndex + '.png'
     if (headIndex <= 0) {
       headIndex = 5
     } else if (headIndex <= 5) {
       headIndex--
     }
   } else if (clothingIndex == 1) {
-    var bodyImg = body
-    var bodySrc = `${bodyStr1}${bodyIndex}.png`
-    bodyImg.src = bodySrc
+    body.src = bodyImg + bodyIndex + '.png'
     if (bodyIndex <= 0) {
       bodyIndex = 5
     } else if (bodyIndex <= 5) {
       bodyIndex--
     }
   } else if (clothingIndex == 2) {
-    var shoeImg = shoes
-    var shoeSrc = `${shoeStr1}${shoeIndex}.png`
-    shoeImg.src = shoeSrc
-    if (shoeIndex <= 0) {
-      shoeIndex = 5
-    } else if (shoeIndex <= 5) {
-      shoeIndex--
+    shoes.src = shoesImg + shoesIndex + '.png'
+    if (shoesIndex <= 0) {
+      shoesIndex = 5
+    } else if (shoesIndex <= 5) {
+      shoesIndex--
     }
   }
 }
