@@ -34,21 +34,21 @@ function indexDown() {
 }
 
 function indexRight() {
-  if (clothingIndex == 0) {
+  if (clothesIndex == 0) {
     head.src = headImg + headIndex + '.png'
     if (headIndex < 5) {
       headIndex++
     } else {
       headIndex = 0
     }
-  } else if (clothingIndex == 1) {
+  } else if (clothesIndex == 1) {
     body.src = bodyImg + bodyIndex + '.png'
     if (bodyIndex < 5) {
       bodyIndex++
     } else {
       bodyIndex = 0
     }
-  } else if (clothingIndex == 2) {
+  } else if (clothesIndex == 2) {
     shoes.src = shoesImg + shoesIndex + '.png'
     if (shoesIndex < 5) {
       shoesIndex++
@@ -59,21 +59,21 @@ function indexRight() {
 }
 
 function indexLeft() {
-  if (clothingIndex == 0) {
+  if (clothesIndex == 0) {
     head.src = headImg + headIndex + '.png'
     if (headIndex <= 0) {
       headIndex = 5
     } else if (headIndex <= 5) {
       headIndex--
     }
-  } else if (clothingIndex == 1) {
+  } else if (clothesIndex == 1) {
     body.src = bodyImg + bodyIndex + '.png'
     if (bodyIndex <= 0) {
       bodyIndex = 5
     } else if (bodyIndex <= 5) {
       bodyIndex--
     }
-  } else if (clothingIndex == 2) {
+  } else if (clothesIndex == 2) {
     shoes.src = shoesImg + shoesIndex + '.png'
     if (shoesIndex <= 0) {
       shoesIndex = 5
