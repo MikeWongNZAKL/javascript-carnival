@@ -15,11 +15,12 @@ var baloon1 = 0
 var baloon2 = 0
 
 //clicked unicorn call
-uni0.onclick = clickedUni
-uni1.onclick = clickedUni
-uni2.onclick = clickedUni
+let images = document.getElementsByTagName('img')
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = clickedUnicorn
+}
 
-function clickedUni(e) {
+function clickedUnicorn(e) {
   var unicorn = e.target
 
   if (unicorn.id == 'uni0') {
