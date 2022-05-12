@@ -36,8 +36,8 @@ function indexDown() {
 
 function indexRight() {
   if (clothingIndex == 0) {
-    const headImg = head
-    const headSrc = `${headStr1}${headIndex}.png`
+    var headImg = head
+    var headSrc = `${headStr1}${headIndex}.png`
     headImg.src = headSrc
     if (headIndex < 5) {
       headIndex++
@@ -45,8 +45,8 @@ function indexRight() {
       headIndex = 0
     }
   } else if (clothingIndex == 1) {
-    const bodyImg = body
-    const bodySrc = `${bodyStr1}${bodyIndex}.png`
+    var bodyImg = body
+    var bodySrc = `${bodyStr1}${bodyIndex}.png`
     bodyImg.src = bodySrc
     if (bodyIndex < 5) {
       bodyIndex++
@@ -54,8 +54,8 @@ function indexRight() {
       bodyIndex = 0
     }
   } else if (clothingIndex == 2) {
-    const shoeImg = shoes
-    const shoeSrc = `${shoeStr1}${shoeIndex}.png`
+    var shoeImg = shoes
+    var shoeSrc = `${shoeStr1}${shoeIndex}.png`
     shoeImg.src = shoeSrc
     if (shoeIndex < 5) {
       shoeIndex++
@@ -67,8 +67,8 @@ function indexRight() {
 
 function indexLeft() {
   if (clothingIndex == 0) {
-    const headImg = head
-    const headSrc = `${headStr1}${headIndex}.png`
+    var headImg = head
+    var headSrc = `${headStr1}${headIndex}.png`
     headImg.src = headSrc
     if (headIndex <= 0) {
       headIndex = 5
@@ -76,8 +76,8 @@ function indexLeft() {
       headIndex--
     }
   } else if (clothingIndex == 1) {
-    const bodyImg = body
-    const bodySrc = `${bodyStr1}${bodyIndex}.png`
+    var bodyImg = body
+    var bodySrc = `${bodyStr1}${bodyIndex}.png`
     bodyImg.src = bodySrc
     if (bodyIndex <= 0) {
       bodyIndex = 5
@@ -85,8 +85,8 @@ function indexLeft() {
       bodyIndex--
     }
   } else if (clothingIndex == 2) {
-    const shoeImg = shoes
-    const shoeSrc = `${shoeStr1}${shoeIndex}.png`
+    var shoeImg = shoes
+    var shoeSrc = `${shoeStr1}${shoeIndex}.png`
     shoeImg.src = shoeSrc
     if (shoeIndex <= 0) {
       shoeIndex = 5
